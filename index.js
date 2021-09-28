@@ -78,13 +78,13 @@ calculateScore()
 
 function calculateScore(){
 if(highScore[0].score < score){
-  console.log('you score higher than aryan, send me the screenshot I will update it');
+  console.log(`you scored higher than ${highScore[0].name}, send me the screenshot I will update it`);
 }
 else if(highScore[1].score < score){
-  console.log(chalk.yellow.bold('you score higher than deepak, send me the screenshot, I will update it'));
+  console.log(chalk.yellow.bold(`you scored higher than ${highScore[1].name}, send me the screenshot, I will update it`));
 }
-else if((highScore[1].score == score) || (highScore[1].score == score)){
-console.log(chalk.yellow.bold(`You scored high`));
+else if(highScore[1].score == score){
+console.log(chalk.yellow.bold(`You scored same as ${highScore[1].name}, send me the screenshot I will add your name to scoreboard`));
 }
 else{
   console.log(chalk.italic.red('you loose'));
